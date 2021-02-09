@@ -190,7 +190,7 @@ const renderRules = {
     }
 
     return (
-      <View key={node.key} style={[inheritedStyles, styles.code_block_wrapper]}>
+      <View key={node.key} style={[inheritedStyles, styles.code_block]}>
         <Text key={node.key} style={[inheritedStyles, styles.code_block]}>
           {content}
         </Text>
