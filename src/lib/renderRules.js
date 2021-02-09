@@ -172,9 +172,11 @@ const renderRules = {
 
   // Code
   code_inline: (node, children, parent, styles, inheritedStyles = {}) => (
-    <Text key={node.key} style={[inheritedStyles, styles.code_inline]}>
-      {node.content}
-    </Text>
+    <View key={node.key} style={[inheritedStyles, styles.code_inline]}>
+      <Text>
+        {node.content}
+      </Text>
+    </View>
   ),
   code_block: (node, children, parent, styles, inheritedStyles = {}) => {
     // we trim new lines off the end of code blocks because the parser sends an extra one.
@@ -188,9 +190,11 @@ const renderRules = {
     }
 
     return (
-      <Text key={node.key} style={[inheritedStyles, styles.code_block]}>
-        {content}
-      </Text>
+      <View key={node.key} style={[inheritedStyles, styles.code_block]}>
+        <Text key={node.key} style={[inheritedStyles, styles.code_block]}>
+          {content}
+        </Text>
+      </View>
     );
   },
   fence: (node, children, parent, styles, inheritedStyles = {}) => {
