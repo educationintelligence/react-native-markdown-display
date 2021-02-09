@@ -172,8 +172,8 @@ const renderRules = {
 
   // Code
   code_inline: (node, children, parent, styles, inheritedStyles = {}) => (
-    <View key={node.key} style={[inheritedStyles, styles.code_inline]}>
-      <Text>
+    <View key={node.key} style={[inheritedStyles, styles.code_inline_wrapper]}>
+      <Text style={[inheritedStyles, styles.code_inline]}>
         {node.content}
       </Text>
     </View>
